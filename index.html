@@ -1320,7 +1320,65 @@ function goBack(){
 }
 
 // ── SUBMIT ──
-function submitForm(){
+async function submitForm(){
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxI6a8sK0kp2INHGZBHWyhKdWUXhXy9ifuO1Ph_uJmL32ZVyphnoQ5fWq_IRr7QxyBy1Q/exec";
+
+  // Gather all data
+  const payload = {
+    nombre: document.getElementById('nombre').value,
+    disponibilidad: getSelected('disp') === 'si' ? 'Sí — trabajé hoy' : 
+                    getSelected('disp') === 'libre' ? 'No — día libre / personal' : 'No — otro motivo',
+    actividad: getMultiSelected('act').map(v => {
+      const map = {booth:'Booth', cambaceo:'Cambaceo', seguimiento:'Seguimiento a clientes',
+        llamadas_leads:'Llamada a leads', referidos:'Llamadas para referidos',
+        fg:'Firma y Gana', ig:'Instala y Gana', rrss:'Redes Sociales', otro_act:'Otro'};
+      return map[v] || v;
+    }),
+    enfoque: getMultiSelected('enf').map(v => {
+      const map = {solar:'Solar', roofing:'Roofing', agua:'Agua', anker:'Anker'};
+      return map[v] || v;
+    }),
+    leads: nums.leads,
+    citas: nums.citas,
+    ventas: nums.ventas,
+    productos: getMultiSelected('prod').map(v => {
+      const map = {solar:'Solar', roofing:'Roofing', agua:'Agua', anker:'Anker', otro:'Otro'};
+      return map[v] || v;
+    }),
+    fuente: getMultiSelected('src').map(v => {
+      const map = {prospeccion:'Prospección directa', referido:'Referido de cliente',
+        src_fg:'Firma y Gana', src_ig:'Instala y Gana', seguimiento:'Seguimiento / llamadas',
+        rrss:'Redes Sociales'};
+      return map[v] || v;
+    }),
+    fg_cliente: document.getElementById('fg-cliente') ? document.getElementById('fg-cliente').value : '',
+    fg_referidos: nums['fg-ref'] || 0,
+    ig_cliente: document.getElementById('ig-cliente') ? document.getElementById('ig-cliente').value : '',
+    ig_referidos: nums['ig-ref'] || 0,
+    ig_foto: getSelected('foto') === 'si' ? 'Sí — publicó correctamente' :
+             getSelected('foto') === 'no' ? 'No — pendiente' : 'N/A',
+    reclutamiento: getSelected('recluta') === 'si' ? 'Sí' : 'No',
+    recluta_cantidad: getSelected('recluta') === 'si' ? nums['recluta-n'] : 0,
+    nota: document.getElementById('nota') ? document.getElementById('nota').value : ''
+  };
+
+  // Show loading state
+  const btnNext = document.getElementById('btnNext');
+  btnNext.disabled = true;
+  document.getElementById('btnNextLabel').textContent = 'Enviando...';
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+  } catch(err) {
+    console.log('Network note:', err);
+  }
+
+  // Show success regardless (no-cors means we can't read response)
   launchConfetti();
   document.getElementById('app').style.display = 'none';
   document.getElementById('successScreen').classList.add('show');

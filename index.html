@@ -762,7 +762,7 @@ textarea::placeholder{ color:var(--muted); }
       <div class="field">
         <label class="field-label">Tu nombre <span class="req">*</span></label>
         <div class="select-wrap">
-          <select id="nombre">
+          <select id="nombre" onchange="checkActBlocks()">
             <option value="">— Selecciona tu nombre —</option>
             <option>Joel E. Muñiz</option>
             <option>Michelle M. Saez</option>
@@ -856,10 +856,25 @@ textarea::placeholder{ color:var(--muted); }
             <div class="opt-emoji">📱</div>
             <div class="opt-text">Redes Sociales</div>
           </div>
-          <div class="opt" data-group="act" data-val="otro_act" onclick="toggleOpt(this)">
+          <div class="opt" data-group="act" data-val="otro_act" onclick="toggleOpt(this); checkActBlocks()">
             <div class="opt-check-sq">✓</div>
             <div class="opt-emoji">📌</div>
             <div class="opt-text">Otro</div>
+          </div>
+          <div class="opt" data-group="act" data-val="cita_cliente" onclick="toggleOpt(this); checkActBlocks()">
+            <div class="opt-check-sq">✓</div>
+            <div class="opt-emoji">🗓️</div>
+            <div class="opt-text">Cita con cliente</div>
+          </div>
+          <div class="opt" data-group="act" data-val="reclutamiento_entrevista" onclick="toggleOpt(this); checkActBlocks()">
+            <div class="opt-check-sq">✓</div>
+            <div class="opt-emoji">🤝</div>
+            <div class="opt-text">Reclutamiento (entrevista)</div>
+          </div>
+          <div class="opt" data-group="act" data-val="reunion" onclick="toggleOpt(this); checkActBlocks()">
+            <div class="opt-check-sq">✓</div>
+            <div class="opt-emoji">👥</div>
+            <div class="opt-text">Reunión</div>
           </div>
         </div>
       </div>
@@ -888,6 +903,87 @@ textarea::placeholder{ color:var(--muted); }
             <div class="opt-check-sq">✓</div>
             <div class="opt-emoji">🔋</div>
             <div class="opt-text">Anker</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE: CITA CON CLIENTE -->
+      <div id="block-cita-cliente" class="cond">
+        <div class="divider"><span class="divider-label">Cita con cliente</span></div>
+        <div class="field">
+          <label class="field-label">¿Cuántas citas tuviste hoy?</label>
+          <div class="num-row" style="max-width:240px">
+            <div class="num-label">Citas</div>
+            <div class="num-controls">
+              <button class="num-btn" onclick="changeNum('citas-cliente',-1)">−</button>
+              <div class="num-val" id="citas-cliente-val">0</div>
+              <button class="num-btn" onclick="changeNum('citas-cliente',1)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">¿Cerraste alguna venta?</label>
+          <div class="options">
+            <div class="opt" data-group="venta-cliente" data-val="si" onclick="selectOpt(this); document.getElementById('prod-cliente-field').style.display='block'; document.getElementById('ventas-cliente-row').style.display='flex'">
+              <div class="opt-check">✓</div><div class="opt-emoji">🔥</div>
+              <div class="opt-text">Sí — cerré una venta</div>
+            </div>
+            <div class="opt" data-group="venta-cliente" data-val="no" onclick="selectOpt(this); document.getElementById('prod-cliente-field').style.display='none'; document.getElementById('ventas-cliente-row').style.display='none'">
+              <div class="opt-check">✓</div><div class="opt-emoji">➖</div>
+              <div class="opt-text">No esta vez</div>
+            </div>
+          </div>
+        </div>
+        <div id="ventas-cliente-row" style="display:none" class="field">
+          <label class="field-label">¿Cuántas ventas?</label>
+          <div class="num-row" style="max-width:240px">
+            <div class="num-label">Ventas</div>
+            <div class="num-controls">
+              <button class="num-btn" onclick="changeNum('ventas-cliente',-1)">−</button>
+              <div class="num-val" id="ventas-cliente-val">0</div>
+              <button class="num-btn" onclick="changeNum('ventas-cliente',1)">+</button>
+            </div>
+          </div>
+        </div>
+        <div id="prod-cliente-field" class="field" style="display:none">
+          <label class="field-label">¿Qué producto(s) vendiste?</label>
+          <div class="opts-grid">
+            <div class="opt" data-group="prod-cliente" data-val="solar" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">☀️</div><div class="opt-text">Solar</div></div>
+            <div class="opt" data-group="prod-cliente" data-val="roofing" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">🏠</div><div class="opt-text">Roofing</div></div>
+            <div class="opt" data-group="prod-cliente" data-val="agua" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">💧</div><div class="opt-text">Agua</div></div>
+            <div class="opt" data-group="prod-cliente" data-val="anker" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">🔋</div><div class="opt-text">Anker</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE: RECLUTAMIENTO ENTREVISTA -->
+      <div id="block-reclutamiento" class="cond">
+        <div class="divider"><span class="divider-label">Reclutamiento</span></div>
+        <div class="field">
+          <label class="field-label">¿Con quién fue la entrevista?</label>
+          <input class="text-input" id="recluta-nombre" type="text" placeholder="Nombre del prospecto">
+        </div>
+        <div class="field">
+          <label class="field-label">¿Cómo resultó?</label>
+          <div class="options">
+            <div class="opt" data-group="recluta-resultado" data-val="proceso" onclick="selectOpt(this)"><div class="opt-check">✓</div><div class="opt-emoji">🔄</div><div class="opt-text">Sigue en proceso</div></div>
+            <div class="opt" data-group="recluta-resultado" data-val="no" onclick="selectOpt(this)"><div class="opt-check">✓</div><div class="opt-emoji">❌</div><div class="opt-text">No continuó</div></div>
+            <div class="opt" data-group="recluta-resultado" data-val="pendiente" onclick="selectOpt(this)"><div class="opt-check">✓</div><div class="opt-emoji">⏳</div><div class="opt-text">Pendiente de evaluar</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE: REUNIÓN -->
+      <div id="block-reunion" class="cond">
+        <div class="divider"><span class="divider-label">Reunión</span></div>
+        <div class="field" id="reunion-field-todos">
+          <label class="field-label">¿Qué tipo de reunión? (selecciona todas las que apliquen)</label>
+          <div class="options" id="reunion-opts">
+            <div class="opt" data-group="reunion-tipo" data-val="general" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">📋</div><div class="opt-text">Reunión general</div></div>
+            <div class="opt" data-group="reunion-tipo" data-val="equipo" onclick="toggleOpt(this)"><div class="opt-check-sq">✓</div><div class="opt-emoji">🔥</div><div class="opt-text">Reunión de equipo (The Chosen)</div></div>
+            <div class="opt reunion-lideres" data-group="reunion-tipo" data-val="lideres_gerentes" onclick="toggleOpt(this)" style="display:none"><div class="opt-check-sq">✓</div><div class="opt-emoji">🤝</div><div class="opt-text">Reunión de líderes y gerentes</div></div>
+            <div class="opt reunion-gerentes" data-group="reunion-tipo" data-val="gerentes" onclick="toggleOpt(this)" style="display:none"><div class="opt-check-sq">✓</div><div class="opt-emoji">👔</div><div class="opt-text">Reunión de gerentes</div></div>
+            <div class="opt reunion-comite" data-group="reunion-tipo" data-val="comite" onclick="toggleOpt(this)" style="display:none"><div class="opt-check-sq">✓</div><div class="opt-emoji">🏛️</div><div class="opt-text">Reunión de comité</div></div>
           </div>
         </div>
       </div>
@@ -920,19 +1016,20 @@ textarea::placeholder{ color:var(--muted); }
               <button class="num-btn" onclick="changeNum('citas',1)">+</button>
             </div>
           </div>
-          <div class="num-row">
+
+          <div id="ventas-prospeccion-row" class="num-row">
             <div class="num-label">Ventas cerradas</div>
             <div class="num-controls">
-              <button class="num-btn" onclick="changeNum('ventas',-1)">−</button>
-              <div class="num-val" id="ventas-val">0</div>
-              <button class="num-btn" onclick="changeNum('ventas',1)">+</button>
+              <button class="num-btn" onclick="changeNum('ventas-prospeccion',-1)">−</button>
+              <div class="num-val" id="ventas-prospeccion-val">0</div>
+              <button class="num-btn" onclick="changeNum('ventas-prospeccion',1)">+</button>
             </div>
           </div>
         </div>
       </div>
 
       <div class="field" id="productField" style="display:none">
-        <label class="field-label">¿Qué producto(s) vendiste?</label>
+        <label class="field-label">¿Qué producto(s) vendiste en prospección?</label>
         <div class="opts-grid">
           <div class="opt" data-group="prod" data-val="solar" onclick="toggleOpt(this)">
             <div class="opt-check-sq">✓</div>
@@ -1093,7 +1190,7 @@ textarea::placeholder{ color:var(--muted); }
             <div class="num-label">Personas</div>
             <div class="num-controls">
               <button class="num-btn" onclick="changeNum('recluta-n',-1)">−</button>
-              <div class="num-val" id="recluta-n-val">1</div>
+              <div class="num-val" id="recluta-n-val">0</div>
               <button class="num-btn" onclick="changeNum('recluta-n',1)">+</button>
             </div>
           </div>
@@ -1145,7 +1242,7 @@ textarea::placeholder{ color:var(--muted); }
 
 <script>
 // ── STATE ──
-const nums = { leads:0, citas:0, ventas:0, 'fg-ref':0, 'ig-ref':0, 'recluta-n':1 };
+const nums = { leads:0, citas:0, ventas:0, 'fg-ref':0, 'ig-ref':0, 'recluta-n':0, 'citas-cliente':0, 'ventas-cliente':0, 'citas-prospeccion':0, 'ventas-prospeccion':0 };
 let currentStep = 1;
 let hasFG = false;
 let hasIG = false;
@@ -1228,13 +1325,13 @@ function getMultiSelected(group){
 
 // ── NUMBERS ──
 function changeNum(key, delta){
-  const min = key==='recluta-n'?1:0;
+  const min = 0;
   nums[key] = Math.max(min, (nums[key]||0)+delta);
   document.getElementById(key+'-val').textContent = nums[key];
 
   // show product field if ventas > 0
-  if(key==='ventas'){
-    document.getElementById('productField').style.display = nums.ventas > 0 ? 'block' : 'none';
+  if(key==='ventas-prospeccion'){
+    document.getElementById('productField').style.display = nums['ventas-prospeccion'] > 0 ? 'block' : 'none';
   }
 }
 
@@ -1355,7 +1452,23 @@ async function submitForm(){
              getSelected('foto') === 'no' ? 'No — pendiente' : 'N/A',
     reclutamiento: getSelected('recluta') === 'si' ? 'Sí' : 'No',
     recluta_cantidad: getSelected('recluta') === 'si' ? nums['recluta-n'] : 0,
-    nota: document.getElementById('nota') ? document.getElementById('nota').value : ''
+    nota: document.getElementById('nota') ? document.getElementById('nota').value : '',
+    citas_cliente: nums['citas-cliente'] || 0,
+    ventas_cliente: nums['ventas-cliente'] || 0,
+    prod_cliente: getMultiSelected('prod-cliente').map(v => {
+      const map = {solar:'Solar',roofing:'Roofing',agua:'Agua',anker:'Anker'};
+      return map[v] || v;
+    }),
+    ventas_prospeccion: nums['ventas-prospeccion'] || 0,
+    recluta_nombre: document.getElementById('recluta-nombre') ? document.getElementById('recluta-nombre').value : '',
+    recluta_resultado: (() => {
+      const sel = document.querySelector('.opt.selected[data-group="recluta-resultado"]');
+      return sel ? (sel.dataset.val === 'proceso' ? 'Sigue en proceso' : sel.dataset.val === 'no' ? 'No continuó' : 'Pendiente de evaluar') : '';
+    })(),
+    reunion_tipos: getMultiSelected('reunion-tipo').map(v => {
+      const map = {general:'Reunión general',equipo:'Reunión de equipo (The Chosen)',lideres_gerentes:'Reunión de líderes y gerentes',gerentes:'Reunión de gerentes',comite:'Reunión de comité'};
+      return map[v] || v;
+    })
   };
 
   // Show loading state
@@ -1404,9 +1517,29 @@ function launchConfetti(){
   setTimeout(()=>wrap.innerHTML='', 4000);
 }
 
+
+// ── ACT BLOCKS ──
+function checkActBlocks(){
+  const acts = getMultiSelected('act');
+  
+  // Bloques extras
+  document.getElementById('block-cita-cliente').classList.toggle('show', acts.includes('cita_cliente'));
+  document.getElementById('block-reclutamiento').classList.toggle('show', acts.includes('reclutamiento_entrevista'));
+  document.getElementById('block-reunion').classList.toggle('show', acts.includes('reunion'));
+
+  // Reunión: mostrar opciones según nombre seleccionado
+  const nombre = document.getElementById('nombre').value;
+  const esMichelle = nombre === 'Michelle M. Saez';
+  const esJoel = nombre === 'Joel E. Muñiz';
+  document.querySelectorAll('.reunion-lideres').forEach(el => el.style.display = (esJoel || esMichelle) ? 'flex' : 'none');
+  document.querySelectorAll('.reunion-gerentes').forEach(el => el.style.display = esJoel ? 'flex' : 'none');
+  document.querySelectorAll('.reunion-comite').forEach(el => el.style.display = esJoel ? 'flex' : 'none');
+}
+
 // ── INIT ──
 initDots();
 updateDots(1);
 </script>
 </body>
 </html>
+

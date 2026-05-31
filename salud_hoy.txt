@@ -1,4 +1,4 @@
-SALUD — 31 de May de 2026, 10:50 AM AST
+SALUD — 31 de May de 2026, 10:51 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
@@ -10,7 +10,7 @@ Sueño:        10h 16m
 BIOMARCADORES (KETO-MOJO)
 Cetonas:      0.1 mmol/L
 Glucosa:      126 mg/dL
-GKI:          70.0 — Fuera de cetosis
+GKI:          77 — Fuera de cetosis
 
 COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         182.1 lb
@@ -18,7 +18,7 @@ Peso:         182.1 lb
 ALERTAS
   ⚠️ Glucosa elevada: 126 mg/dL — fuera de rango keto (meta <100)
   ⚠️ Fuera de cetosis: 0.1 mmol/L
-  ⚠️ GKI alto: 70.0 — fuera de cetosis
+  ⚠️ GKI alto: 77 — fuera de cetosis
   ⚠️ HRV baja: 22.7 ms — estrés o fatiga
   ⚠️ FC reposo elevada: 87 bpm
 

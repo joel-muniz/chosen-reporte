@@ -1,22 +1,25 @@
-SALUD — 30 de May de 2026, 08:08 AM AST
+SALUD — 31 de May de 2026, 10:47 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
-Recovery:     92% — Verde — Listo
-HRV:          36.8 ms
-FC reposo:    74 bpm
-Sueño:        6h 47m
+Recovery:     34% — Amarillo — Con cuidado
+HRV:          22.7 ms
+FC reposo:    87 bpm
+Sueño:        10h 16m
 
 BIOMARCADORES (KETO-MOJO)
-Cetonas:      0.9 mmol/L
-Glucosa:      96 mg/dL
-GKI:          5.9 — Cetosis nutricional
+Cetonas:      N/D
+Glucosa:      N/D
+GKI:          N/D — N/D
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         178.1 lb
+Peso:         182.1 lb
 
 ALERTAS
-Ninguna
+  ⚠️ HRV baja: 22.7 ms — estrés o fatiga
+  ⚠️ FC reposo elevada: 87 bpm — noche date con Michelle
+  ⚠️ Keto-Mojo: sin lectura — protocolo interrumpido anoche
+  ⚠️ Peso +4.0 lb vs ayer — fluctuación post-date esperada
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

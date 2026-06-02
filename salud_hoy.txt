@@ -1,26 +1,22 @@
-SALUD — 01 de June de 2026, 06:23 AM AST
+SALUD — 02 de June de 2026, 08:15 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
-Recovery:     13% — Rojo — Recuperación
-HRV:          13.5 ms
-FC reposo:    92 bpm
-Sueño:        6h 49m
+Recovery:     95% — Verde — Listo
+HRV:          46.4 ms
+FC reposo:    69 bpm
+Sueño:        7h 13m
 
 BIOMARCADORES (KETO-MOJO)
-Cetonas:      0.1 mmol/L
-Glucosa:      112 mg/dL
-GKI:          62.2 — Fuera de cetosis
+Cetonas:      N/D — token MyMojoHealth expirado
+Glucosa:      N/D — token MyMojoHealth expirado
+GKI:          N/D — token MyMojoHealth expirado
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         185.1 lb
+Peso:         181.3 lb
 
 ALERTAS
-  ⚠️ Recovery crítico: 13% — zona roja
-  ⚠️ Fuera de cetosis: 0.1 mmol/L
-  ⚠️ Glucosa elevada: 112 mg/dL
-  ⚠️ GKI alto: 62.2 — fuera de cetosis
-  ⚠️ HRV baja: 13.5 ms — estrés o fatiga
+  ⚠️ MyMojoHealth token expirado — recuperación manual requerida
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

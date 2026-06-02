@@ -1,4 +1,4 @@
-SALUD — 02 de June de 2026, 08:15 AM AST
+SALUD — 02 de June de 2026, 08:17 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
@@ -7,16 +7,18 @@ HRV:          46.4 ms
 FC reposo:    69 bpm
 Sueño:        7h 13m
 
-BIOMARCADORES (KETO-MOJO)
-Cetonas:      N/D — token MyMojoHealth expirado
-Glucosa:      N/D — token MyMojoHealth expirado
-GKI:          N/D — token MyMojoHealth expirado
+BIOMARCADORES (KETO-MOJO) — 7:53 AM
+Cetonas:      0.2 mmol/L
+Glucosa:      123 mg/dL
+GKI:          34.1 — Fuera de cetosis
+
+ALERTAS
+  ⚠️ Glucosa elevada: 123 mg/dL (meta <106)
+  ⚠️ GKI alto: 34.1 — fuera de cetosis
+  ⚠️ Cetonas bajas: 0.2 mmol/L (meta >0.5)
 
 COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         181.3 lb
-
-ALERTAS
-  ⚠️ MyMojoHealth token expirado — recuperación manual requerida
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

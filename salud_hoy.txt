@@ -1,30 +1,24 @@
-SALUD — 03 de junio de 2026 (cierre nocturno)
+SALUD — 04 de June de 2026, 11:31 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
-Recovery:     89% — Verde — Listo
-HRV:          38.9 ms
-FC reposo:    76 bpm
-Sueño:        7h 37min (SWS 77min / REM 107min)
+Recovery:     71% — Verde — Listo
+HRV:          32.8 ms
+FC reposo:    78 bpm
+Sueño:        8h 24m
 
-BIOMARCADORES (KETO-MOJO — noche)
-Cetonas:      0.1 mmol/L
-Glucosa:      116 mg/dL
-GKI:          64.4 — Fuera de cetosis
+BIOMARCADORES (KETO-MOJO)
+Cetonas:      0.3 mmol/L
+Glucosa:      130 mg/dL
+GKI:          24.0 — Wellness
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         180.7 lb
-
-CONTEXTO DEL DÍA
-Graduación de Alexander. Día de logística familiar intensa.
-Sin caminata. Sin HIIT. Sin rolos (ajuste quiropráctico + masaje terapéutico Dr. Pérez).
-Comida fuera de protocolo: Denny's — nachos, mozzarella sticks, medio hamburger.
-Sin Balance ni Stronghold antes de comer.
+Peso:         182.9 lb
 
 ALERTAS
-  ⚠️ Fuera de cetosis: 0.1 mmol/L
-  ⚠️ Glucosa elevada: 116 mg/dL
-  ⚠️ GKI alto: 64.4 — fuera de cetosis
+  ⚠️ Glucosa elevada: 130 mg/dL
+  ⚠️ Fuera de cetosis: 0.3 mmol/L
+  ⚠️ GKI alto: 24.0 — fuera de cetosis
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

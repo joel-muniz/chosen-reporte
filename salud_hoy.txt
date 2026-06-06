@@ -1,4 +1,4 @@
-SALUD — 05 de June de 2026, 08:46 AM AST
+SALUD — 05 de June de 2026, 11:33 PM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
@@ -8,16 +8,15 @@ FC reposo:    64 bpm
 Sueño:        6h 6m
 
 BIOMARCADORES (KETO-MOJO)
-Cetonas:      0.4 mmol/L
-Glucosa:      108 mg/dL
-GKI:          15.0 — Fuera de cetosis
+Cetonas:      0.4 mmol/L (mañana) → 0.6 mmol/L (noche)
+Glucosa:      108 mg/dL (mañana) → 92 mg/dL (noche)
+GKI:          15.0 → 8.5 — Fuera de cetosis
 
 COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         178.9 lb
 
 ALERTAS
-  ⚠️ Fuera de cetosis: GKI 15.0 — proceso de retorno en curso
-  ⚠️ Glucosa elevada: 108 mg/dL
+  ⚠️ GKI en recuperación: 8.5 noche (mañana 15.0) — retornando a cetosis
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

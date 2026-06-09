@@ -1,11 +1,11 @@
-SALUD — 09 de June de 2026, 07:59 AM AST
+SALUD — 09 de June de 2026, 07:49 PM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
 Recovery:     69% — Amarillo — Con cuidado
 HRV:          36.9 ms
 FC reposo:    75 bpm
-Sueño:        6h 45m
+Sueño:        6h 45m (SWS 65min / REM 101min)
 
 BIOMARCADORES (KETO-MOJO)
 Cetonas:      0.7 mmol/L
@@ -14,10 +14,14 @@ GKI:          8.8 — Wellness (límite cetosis)
 
 COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         180.7 lb
-Nota:         Composición N/D — mango no registró hoy (7 intentos)
+Nota:         Composición N/D — mango no registró (7 intentos)
+
+COMIDA
+Lasaña keto + Ensalada Southwest media bolsa | 7:30pm
+Balance ✅ | Stronghold ❌ (agotado) | Unimate ✅ | Probionic ✅
 
 ALERTAS
-  ⚠️ Glucosa elevada: 111 mg/dL (probable Dawn Phenomenon)
+  ⚠️ Glucosa elevada mañana: comida a las 7:30pm — ayuno nocturno corto (~11h)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

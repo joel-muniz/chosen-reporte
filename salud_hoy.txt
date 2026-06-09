@@ -1,4 +1,4 @@
-SALUD — 08 de June de 2026, 06:56 AM AST
+SALUD — 08 de June de 2026, 11:29 PM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
@@ -8,8 +8,8 @@ FC reposo:    75 bpm
 Sueño:        6h 30m
 
 BIOMARCADORES (KETO-MOJO)
-Cetonas:      1.0 mmol/L
-Glucosa:      104 mg/dL
+Cetonas:      1.0 mmol/L (mañana) | 0.2 mmol/L (noche)
+Glucosa:      104 mg/dL (mañana) | 89 mg/dL (noche)
 GKI:          5.78 — Cetosis nutricional
 
 COMPOSICIÓN CORPORAL (WITHINGS)

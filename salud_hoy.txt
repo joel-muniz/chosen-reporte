@@ -1,11 +1,11 @@
-SALUD — 11 de June de 2026, 08:21 AM AST
+SALUD — 11 de June de 2026, 09:27 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 RECUPERACIÓN (WHOOP)
-Recovery:     N/D — N/D
-HRV:          N/D
-FC reposo:    N/D
-Sueño:        N/D
+Recovery:     59% — Amarillo — Con cuidado
+HRV:          30.6 ms
+FC reposo:    76 bpm
+Sueño:        6h 53m
 
 BIOMARCADORES (KETO-MOJO)
 Cetonas:      1.1 mmol/L
@@ -16,8 +16,8 @@ COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         179.2 lb
 
 ALERTAS
-  ⚠️ Glucosa elevada: 109 mg/dL (consistente con patrón matutino — dawn phenomenon)
-  ⚠️ Whoop no disponible — recovery/HRV/sueño/strain sin lectura (token requiere recaptura manual)
+  ⚠️ Glucosa matutina 109 mg/dL — leve, patrón normal (dawn phenomenon)
+  ⚠️ Recovery 59% (amarillo) + HRV en descenso 4 días — día de prioridad recuperación, evitar carga alta
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

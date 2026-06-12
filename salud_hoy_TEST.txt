@@ -1,17 +1,20 @@
-SALUD — 11 de junio de 2026 (ARCHIVO DE PRUEBA)
+SALUD — 11 de June de 2026, 08:00 PM AST (ARCHIVO DE PRUEBA)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RECUPERACIÓN (WHOOP)
 Recovery:     59% — Amarillo — Con cuidado
 HRV:          30.6 ms
 FC reposo:    76 bpm
-Sueño:        6h 53m
+Sueño:        6h 54m
+
 BIOMARCADORES (KETO-MOJO)
 Cetonas:      1.1 mmol/L
 Glucosa:      109 mg/dL
 GKI:          5.5 — Quema de grasa activa
-COMPOSICIÓN (WITHINGS)
+
+COMPOSICIÓN CORPORAL (WITHINGS)
 Peso:         179.2 lb
+
 ALERTAS
   ⚠️ Glucosa elevada: 109 mg/dL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ARCHIVO DE PRUEBA — generado por validación, no consumido por Windmar.
+Generado automáticamente por el proyecto de salud. (ARCHIVO DE PRUEBA)

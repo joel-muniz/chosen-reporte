@@ -1,23 +1,22 @@
-SALUD — 30 de June de 2026, 03:21 PM AST
+SALUD — 01 de July de 2026, 07:01 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RECUPERACIÓN (WHOOP)
-Recovery:     36% — Amarillo — Con cuidado
-HRV:          19.8 ms
-FC reposo:    82 bpm
-Sueño:        8h 43m
+Recovery:     83% — Verde — Listo
+HRV:          42.9 ms
+FC reposo:    70 bpm
+Sueño:        4h 38m
 
 BIOMARCADORES (KETO-MOJO)
-Cetonas:      0.1 mmol/L
-Glucosa:      113 mg/dL
-GKI:          62.8 — Fuera de cetosis
+Cetonas:      0.3 mmol/L
+Glucosa:      109 mg/dL
+GKI:          20.2 — Fuera de cetosis
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         188.5 lb
+Peso:         182.1 lb
 
 ALERTAS
-  ⚠️ Fuera de cetosis: 0.1 mmol/L
-  ⚠️ Glucosa elevada: 113 mg/dL
-  ⚠️ GKI alto: 62.8 — fuera de cetosis
-  ⚠️ HRV baja: 19.8 ms — estrés o fatiga
+  ⚠️ Fuera de cetosis: 0.3 mmol/L
+  ⚠️ Glucosa elevada: 109 mg/dL
+  ⚠️ GKI alto: 20.2 — fuera de cetosis
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

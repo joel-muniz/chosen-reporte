@@ -1,13 +1,1 @@
-[
- {
-  "reunion": "TEST — borrar",
-  "fecha": "2026-07-04",
-  "compromisos": [
-   {
-    "nombre": "PRUEBA",
-    "dias_activos": "5"
-   }
-  ],
-  "ts": "2026-07-04T13:34:08.304Z"
- }
-]
+[]

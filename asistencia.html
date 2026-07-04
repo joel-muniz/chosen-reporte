@@ -50,10 +50,25 @@ document.getElementById('fecha').textContent = hoy.toLocaleDateString('es-PR',{w
 // Candado: un registro por teléfono por día
 const HOY = hoy.toISOString().slice(0,10);
 const yaRegistrado = (() => { try { return localStorage.getItem('chosen_asist_' + HOY); } catch(e) { return null; } })();
+let adminMode = false;
+function pedirAdmin() {
+  const pin = prompt('PIN de gerente:');
+  if (pin === atob('MjYxOQ==')) {
+    adminMode = true;
+    document.getElementById('ok').style.display = 'none';
+    document.getElementById('formulario').style.display = 'flex';
+    document.getElementById('btn').textContent = 'Registrar (modo gerente)';
+    sel = null;
+    document.querySelectorAll('.chip').forEach(x => x.classList.remove('sel'));
+    document.getElementById('btn').disabled = true;
+  } else if (pin !== null) {
+    alert('PIN incorrecto');
+  }
+}
 if (yaRegistrado) {
   document.getElementById('formulario').style.display = 'none';
   document.getElementById('okNombre').textContent = yaRegistrado;
-  document.querySelector('#ok p').textContent = 'Este teléfono ya registró asistencia hoy. Cada persona registra desde su propio teléfono.';
+  document.querySelector('#ok p').innerHTML = 'Este teléfono ya registró asistencia hoy. Cada persona registra desde su propio teléfono.<br><br><a href="#" onclick="pedirAdmin(); return false;" style="color:#5A6A94; font-size:13px;">Registro administrativo (gerente)</a>';
   document.getElementById('ok').style.display = 'flex';
 }
 
@@ -87,12 +102,15 @@ async function enviar() {
   try {
     await fetch('https://joel-chosen.oph.st/webhook/chosen-asistencia', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ nombre, fecha: HOY, reunion:'Reunión The Chosen — ' + HOY, device: huella })
+      body: JSON.stringify({ nombre, fecha: HOY, reunion:'Reunión The Chosen — ' + HOY, device: huella, via: adminMode ? 'Admin (Joel)' : 'directo' })
     });
   } catch(e) {}
-  try { localStorage.setItem('chosen_asist_' + HOY, nombre); } catch(e) {}
+  if (!adminMode) { try { localStorage.setItem('chosen_asist_' + HOY, nombre); } catch(e) {} }
   document.getElementById('formulario').style.display = 'none';
   document.getElementById('okNombre').textContent = nombre;
+  if (adminMode) {
+    document.querySelector('#ok p').innerHTML = 'Registrado por el gerente. <br><br><a href="#" onclick="pedirAdmin(); return false;" style="color:#F5A623;">➕ Registrar a otra persona</a>';
+  }
   document.getElementById('ok').style.display = 'flex';
 }
 </script>

@@ -1,20 +1,28 @@
 [
  {
-  "nombre": "Joel E. Mu\u00f1iz",
+  "nombre": "Joel E. Muñiz",
   "fecha": "2026-07-04",
-  "reunion": "Reuni\u00f3n The Chosen \u2014 2026-07-04",
+  "reunion": "Reunión The Chosen — 2026-07-04",
   "ts": "2026-07-04T13:51:05.348Z"
  },
  {
   "nombre": "Edgardo Vargas",
   "fecha": "2026-07-04",
-  "reunion": "Reuni\u00f3n The Chosen \u2014 2026-07-04",
+  "reunion": "Reunión The Chosen — 2026-07-04",
   "ts": "2026-07-04T14:08:43.402Z"
  },
  {
   "nombre": "Michelle M. Saez",
   "fecha": "2026-07-04",
-  "reunion": "Reuni\u00f3n The Chosen \u2014 2026-07-04",
+  "reunion": "Reunión The Chosen — 2026-07-04",
   "ts": "2026-07-04T14:08:52.118Z"
+ },
+ {
+  "nombre": "Christian Quintana",
+  "fecha": "2026-07-04",
+  "reunion": "Reunión The Chosen — 2026-07-04",
+  "device": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1 | 440x956 | America/Puerto_Rico",
+  "via": "Admin (Joel)",
+  "ts": "2026-07-04T16:55:58.431Z"
  }
 ]

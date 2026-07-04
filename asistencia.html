@@ -53,7 +53,7 @@ const yaRegistrado = (() => { try { return localStorage.getItem('chosen_asist_' 
 let adminMode = false;
 function pedirAdmin() {
   const pin = prompt('PIN de gerente:');
-  if (pin === atob('MjYxOQ==')) {
+  if (pin !== null && pin.trim() === atob('Zmlya2UyLXZ5Y3FlZy1OeXFmaWY=')) {
     adminMode = true;
     document.getElementById('ok').style.display = 'none';
     document.getElementById('formulario').style.display = 'flex';

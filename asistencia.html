@@ -35,6 +35,19 @@
     <button class="enviar" id="btn" disabled onclick="enviar()">Registrar mi asistencia</button>
   </div>
 
+  <div id="adminPanel" style="display:none; flex-direction:column; align-items:center; width:100%; max-width:440px; margin-top:40px;">
+    <div style="font-size:20px; font-weight:800; margin-bottom:6px;">Registro administrativo</div>
+    <div style="color:#9FB0D8; font-size:14px; margin-bottom:18px;">Solo gerente — usa Face ID con tu contraseña guardada</div>
+    <form id="adminForm" style="width:100%; display:flex; flex-direction:column; gap:10px;" action="#" method="post">
+      <input type="text" name="username" autocomplete="username" value="PIN gerente — Asistencia Chosen" readonly
+             style="position:absolute; left:-9999px; height:1px;" aria-hidden="true" tabindex="-1">
+      <input type="password" id="adminPin" name="password" autocomplete="current-password" placeholder="PIN de gerente"
+             style="width:100%; background:#162444; border:1px solid #1B3A8C; border-radius:14px; color:#EAF0FF; padding:15px; font-size:16px;">
+      <button type="submit" class="enviar" style="margin-top:6px;">Entrar</button>
+      <a href="#" onclick="cancelarAdmin(); return false;" style="color:#5A6A94; font-size:13px; text-align:center; margin-top:4px;">Cancelar</a>
+    </form>
+  </div>
+
   <div class="ok" id="ok">
     <div class="check">✅</div>
     <h2 id="okNombre"></h2>
@@ -52,19 +65,33 @@ const HOY = hoy.toISOString().slice(0,10);
 const yaRegistrado = (() => { try { return localStorage.getItem('chosen_asist_' + HOY); } catch(e) { return null; } })();
 let adminMode = false;
 function pedirAdmin() {
-  const pin = prompt('PIN de gerente:');
-  if (pin !== null && pin.trim() === atob('Zmlya2UyLXZ5Y3FlZy1OeXFmaWY=')) {
-    adminMode = true;
-    document.getElementById('ok').style.display = 'none';
-    document.getElementById('formulario').style.display = 'flex';
-    document.getElementById('btn').textContent = 'Registrar (modo gerente)';
-    sel = null;
-    document.querySelectorAll('.chip').forEach(x => x.classList.remove('sel'));
-    document.getElementById('btn').disabled = true;
-  } else if (pin !== null) {
-    alert('PIN incorrecto');
-  }
+  document.getElementById('ok').style.display = 'none';
+  document.getElementById('formulario').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'flex';
+  setTimeout(() => document.getElementById('adminPin').focus(), 200);
 }
+function cancelarAdmin() {
+  document.getElementById('adminPanel').style.display = 'none';
+  document.getElementById('ok').style.display = 'flex';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('adminForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const pin = document.getElementById('adminPin').value;
+    if (pin.trim() === atob('Zmlya2UyLXZ5Y3FlZy1OeXFmaWY=')) {
+      adminMode = true;
+      document.getElementById('adminPin').value = '';
+      document.getElementById('adminPanel').style.display = 'none';
+      document.getElementById('formulario').style.display = 'flex';
+      document.getElementById('btn').textContent = 'Registrar (modo gerente)';
+      sel = null;
+      document.querySelectorAll('.chip').forEach(x => x.classList.remove('sel'));
+      document.getElementById('btn').disabled = true;
+    } else {
+      alert('PIN incorrecto');
+    }
+  });
+});
 if (yaRegistrado) {
   document.getElementById('formulario').style.display = 'none';
   document.getElementById('okNombre').textContent = yaRegistrado;

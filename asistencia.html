@@ -43,9 +43,19 @@
   </div>
 
 <script>
-const ROSTER = ['Joel E. Muñiz','Michelle M. Saez','Christian Quintana','Carlos Rodríguez','Gilberto Talbot','Manuel González','Gerardo Torres','Diana Pellot','Edgardo Vargas','Lilivette Camacho','Lynmarie Justiniano','Sebastián Rodríguez','Víctor M. Jaffett','Jonathan Santiago'];
+const ROSTER = ['Joel E. Muñiz','Michelle M. Saez','Christian Quintana','Carlos Rodríguez','Manuel González','Gerardo Torres','Diana Pellot','Edgardo Vargas','Lilivette Camacho','Lynmarie Justiniano','Sebastián Rodríguez','Víctor M. Jaffett','Jonathan Santiago'];
 const hoy = new Date();
 document.getElementById('fecha').textContent = hoy.toLocaleDateString('es-PR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+// Candado: un registro por teléfono por día
+const HOY = hoy.toISOString().slice(0,10);
+const yaRegistrado = (() => { try { return localStorage.getItem('chosen_asist_' + HOY); } catch(e) { return null; } })();
+if (yaRegistrado) {
+  document.getElementById('formulario').style.display = 'none';
+  document.getElementById('okNombre').textContent = yaRegistrado;
+  document.querySelector('#ok p').textContent = 'Este teléfono ya registró asistencia hoy. Cada persona registra desde su propio teléfono.';
+  document.getElementById('ok').style.display = 'flex';
+}
 
 let sel = null;
 const grid = document.getElementById('grid');
@@ -73,12 +83,14 @@ async function enviar() {
   if (!nombre) return;
   document.getElementById('btn').disabled = true;
   document.getElementById('btn').textContent = 'Registrando...';
+  const huella = [navigator.userAgent, screen.width+'x'+screen.height, Intl.DateTimeFormat().resolvedOptions().timeZone].join(' | ');
   try {
     await fetch('https://joel-chosen.oph.st/webhook/chosen-asistencia', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ nombre, fecha: hoy.toISOString().slice(0,10), reunion:'Reunión The Chosen — ' + hoy.toISOString().slice(0,10) })
+      body: JSON.stringify({ nombre, fecha: HOY, reunion:'Reunión The Chosen — ' + HOY, device: huella })
     });
   } catch(e) {}
+  try { localStorage.setItem('chosen_asist_' + HOY, nombre); } catch(e) {}
   document.getElementById('formulario').style.display = 'none';
   document.getElementById('okNombre').textContent = nombre;
   document.getElementById('ok').style.display = 'flex';

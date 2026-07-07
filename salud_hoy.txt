@@ -1,10 +1,10 @@
-SALUD — 06 de July de 2026, 08:25 AM AST
+SALUD — 07 de July de 2026, 06:35 AM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RECUPERACIÓN (WHOOP)
-Recovery:     42% — Amarillo — Con cuidado
-HRV:          24.7 ms
-FC reposo:    78 bpm
-Sueño:        7h 43m
+Recovery:     77% — Verde — Listo
+HRV:          37.2 ms
+FC reposo:    72 bpm
+Sueño:        N/D
 
 BIOMARCADORES (KETO-MOJO)
 Cetonas:      N/D
@@ -12,9 +12,9 @@ Glucosa:      N/D
 GKI:          N/D — N/D
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         184.7 lb
+Peso:         182.9 lb
 
 ALERTAS
-  ⚠️ HRV baja: 24.7 ms — estrés o fatiga
+Ninguna
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generado automáticamente por el proyecto de salud.

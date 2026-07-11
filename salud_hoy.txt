@@ -1,4 +1,4 @@
-SALUD — 11 de July de 2026, 12:05 PM AST
+SALUD — 11 de July de 2026, 01:26 PM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RECUPERACIÓN (WHOOP)
 Recovery:     43% — Amarillo — Con cuidado
@@ -12,7 +12,7 @@ Glucosa:      102 mg/dL
 GKI:          56.7 — Fuera de cetosis
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         183.6 lb
+Peso:         181.3 lb
 
 ALERTAS
   ⚠️ Fuera de cetosis: 0.1 mmol/L

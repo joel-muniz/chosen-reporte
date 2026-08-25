@@ -1,4 +1,4 @@
-SALUD — 25 de August de 2026, 06:30 AM AST
+SALUD — 25 de August de 2026, 01:56 PM AST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RECUPERACIÓN (WHOOP)
 Recovery:     91% — Verde — Listo
@@ -12,7 +12,7 @@ Glucosa:      87 mg/dL
 GKI:          5.4 — Quema de grasa activa
 
 COMPOSICIÓN CORPORAL (WITHINGS)
-Peso:         186.4 lb
+Peso:         186.0 lb
 
 ALERTAS
 Ninguna

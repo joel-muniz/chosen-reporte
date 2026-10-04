@@ -1,1 +1,20 @@
-PRUEBA PUENTE (sin token) — 2026-07-13 18:32 AST
+SALUD — 04 de October de 2026, 06:40 PM AST (ARCHIVO DE PRUEBA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECUPERACIÓN (WHOOP)
+Recovery:     56% — Amarillo — Con cuidado
+HRV:          26.3 ms
+FC reposo:    78 bpm
+Sueño:        10h 18m
+
+BIOMARCADORES (KETO-MOJO)
+Cetonas:      N/D
+Glucosa:      N/D
+GKI:          N/D — N/D
+
+COMPOSICIÓN CORPORAL (WITHINGS)
+Peso:         191.5 lb
+
+ALERTAS
+  ⚠️ HRV baja: 26.3 ms — estrés o fatiga
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generado automáticamente por el proyecto de salud. (ARCHIVO DE PRUEBA)
